@@ -1,6 +1,4 @@
-
-![Software Guild Logo](swg.png)
-# SWCGUILD Repo 
+# SWCGUILD Repo ![Software Guild Logo](http://joryeugene.bitbucket.org/swg.jpg)
 This repo is for my work done while in the **Software Guild**.
 ### Pre-work
 * **HTML**
