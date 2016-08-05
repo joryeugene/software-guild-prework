@@ -1,4 +1,5 @@
-# SWCGUILD Repo
+
+<img src="http://joryeugene.bitbucket.org/swg.png" width=50px height=50px> # SWCGUILD Repo 
 
 This repo is for my work done while in the **Software Guild**.
 ### Pre-work
