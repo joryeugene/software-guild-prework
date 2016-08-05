@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!-- Jory Eugene Pestorious -->
+<html>
+  <head>
+    <title>Kimbap Heaven - Contact Us</title>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      header h1 {
+        text-align: center;
+        padding: 10px;
+      }
+      nav {
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        font-size: 0.8em;
+        padding: 20px;
+      }
+      nav a {
+        padding: 15px;
+      }
+      .center {
+        margin: 0 auto;
+        padding: 30px;
+        max-width: 700px;
+      }
+      td:first-child {
+        text-align: right;
+        font-size: 1.1em;
+        font-weight: bold;
+      }
+      td {
+        padding: 10px 30px 0px 0px;
+      }
+      input[type=text], select, textarea {
+        border: 2px solid black;
+        font-family: inherit;
+        font-size: inherit;
+        width: 190px;
+      }
+      input[type=submit] {
+        background: #d5d4d4;
+        border: 2px solid black;
+        font-family: inherit;
+        font-size: 0.9em;
+        margin: 10px 0px 100px 85px; /*fixes footer covering content when browser is small*/
+        padding: 4px;
+        width: 111px;
+      }
+      .padding {
+        padding-top: 15px;
+      }
+      footer {
+        background: #FFFFFF;
+        border-top: 2px solid black;
+        font-size: 1.05em;
+        font-weight: bold;
+        text-align: center;
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Kimbap Heaven</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="contactUs.html">Contact Us</a>
+      </nav>
+    </header>
+    <div class="center">
+      <form action="fakePage.html" method="POST">
+        <table>
+          <tr>
+            <td>Name:</td>
+            <td><input type="text" name="name"></td>
+          </tr>
+          <tr>
+            <td>Email:</td>
+            <td><input type="text" name="email"></td>
+          </tr>
+          <tr>
+            <td>Phone:</td>
+            <td><input type="text" name="phone"></td>
+          </tr>
+          <tr>
+            <td>Reason for Inquiry:</td>
+            <td><select name="reason">
+              <option value="catering">Catering</option>
+              <option value="party">Private Party</option>
+              <option value="feedback">Feedback</option>
+              <option value="other">Other</option>
+            </select></td>
+          </tr>
+          <tr>
+            <td class="padding" valign="top">Additional Information:</td>
+            <td><textarea name="addInfo" rows="6"></textarea></td>
+          </tr>
+
+          <tr>
+            <td>Have you been to the restaurant:</td>
+            <td><input type="radio" name="pastCustomer" value="no" checked>No
+                <input type="radio" name="pastCustomer" value="yes">Yes</td>
+          </tr>
+          <tr>
+            <td>Best days to contact you:</td>
+            <td>
+              <input type="checkbox" name="contactDay" value="monday">M
+              <input type="checkbox" name="contactDay" value="tuesday">T
+              <input type="checkbox" name="contactDay" value="wednesday">W
+              <input type="checkbox" name="contactDay" value="thursday">Th
+              <input type="checkbox" name="contactDay" value="friday">F
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><input type="submit" value="Send Request"></td>
+          </tr>
+        </table>
+      </form>
+    </div>
+    <footer>
+      <p>1000 Korea Town Street, Los Angeles, California, 90001</p>
+      <p>(562)-453-1004</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- Jory Eugene Pestorious -->
+<html>
+  <head>
+    <title>Contact Us</title>
+    <style>
+    body {
+      padding: 10px;
+    }
+    td:first-child {
+      text-align: right;
+    }
+    td {
+      padding: 7px;
+    }
+    input[type=text], select, textarea {
+      border: 2px solid black;
+      font-family: inherit;
+      font-size: inherit;
+      width: 190px;
+    }
+    input[type=submit] {
+      background: #f0f0f0;
+      border: 2px solid black;
+      border-radius: 5px;
+      font-family: inherit;
+      font-size: 1.1em;
+      margin-left: 50px;
+      padding: 1px;
+      width: 140px;
+    }
+    .padding {
+      padding-top: 15px;
+    }
+    </style>
+  </head>
+  <body>
+    <form action="fakePage.html" method="POST">
+      <table>
+        <tr>
+          <td>First Name:</td>
+          <td><input type="text" name="firstName"></td>
+        </tr>
+        <tr>
+          <td>Last Name:</td>
+          <td><input type="text" name="lastName"></td>
+        </tr>
+        <tr>
+          <td>Email:</td>
+          <td><input type="text" name="email"></td>
+        </tr>
+        <tr>
+          <td>Type of License:</td>
+          <td><input type="radio" name="typeOfLicense" value="business" checked>Business
+              <input type="radio" name="typeOfLicense" value="personal">Personal</td>
+        </tr>
+        <tr>
+          <td>Reason:</td>
+          <td><select name="reason">
+            <option value="default">Select a Reason</option>
+            <option value="software">Software Support</option>
+            <option value="hardware">Hardware Support</option>
+            <option value="info">Informational Request</option>
+          </select></td>
+        </tr>
+        <tr>
+          <td class="padding" valign="top">Additional Information:</td>
+          <td><textarea name="addInfo" rows="5"></textarea></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><input type="checkbox" name="termsOfService" value="read">
+            I have read the terms of service.</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><input type="submit" value="Send Request"></td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
