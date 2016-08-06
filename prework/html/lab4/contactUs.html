@@ -13,7 +13,7 @@
     td {
       padding: 7px;
     }
-    input[type=text], select, textarea {
+    input[type=text], input[type=email], select, textarea {
       border: 2px solid black;
       font-family: inherit;
       font-size: inherit;
@@ -35,28 +35,28 @@
     </style>
   </head>
   <body>
-    <form action="fakePage.html" method="POST">
+    <form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php " method="get" enctype="multipart/form-data">
       <table>
         <tr>
-          <td>First Name:</td>
-          <td><input type="text" name="firstName"></td>
+          <td><label for="firstName">First Name:</label></td>
+          <td><input type="text" name="firstName" id="firstName"></td>
         </tr>
         <tr>
-          <td>Last Name:</td>
-          <td><input type="text" name="lastName"></td>
+          <td><label for="lastName">Last Name:</label></td>
+          <td><input type="text" name="lastName" id="lastName"></td>
         </tr>
         <tr>
-          <td>Email:</td>
-          <td><input type="text" name="email"></td>
+          <td><label for="email">Email:</label></td>
+          <td><input type="email" name="email" id="email"></td>
         </tr>
         <tr>
           <td>Type of License:</td>
-          <td><input type="radio" name="typeOfLicense" value="business" checked>Business
-              <input type="radio" name="typeOfLicense" value="personal">Personal</td>
+          <td><label><input type="radio" name="typeOfLicense" value="business" checked>Business</label>
+              <label><input type="radio" name="typeOfLicense" value="personal">Personal</label></td>
         </tr>
         <tr>
-          <td>Reason:</td>
-          <td><select name="reason">
+          <td><label for="reason">Reason:</label></td>
+          <td><select name="reason" id="reason">
             <option value="default">Select a Reason</option>
             <option value="software">Software Support</option>
             <option value="hardware">Hardware Support</option>
@@ -64,13 +64,13 @@
           </select></td>
         </tr>
         <tr>
-          <td class="padding" valign="top">Additional Information:</td>
-          <td><textarea name="addInfo" rows="5"></textarea></td>
+          <td class="padding" valign="top"><label for="addInfo">Additional Information:</label></td>
+          <td><textarea name="addInfo" id="addInfo" style="overflow: auto; resize: none" rows="5"></textarea></td>
         </tr>
         <tr>
           <td></td>
-          <td><input type="checkbox" name="termsOfService" value="read">
-            I have read the terms of service.</td>
+          <td><label><input type="checkbox" name="termsOfService" value="read">
+            I have read the terms of service.<label></td>
         </tr>
         <tr>
           <td></td>
