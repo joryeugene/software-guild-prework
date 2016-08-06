@@ -1,0 +1,62 @@
+body {
+  font-family: "Courier New", monospace;
+  font-size: 17px;
+  margin: 0px;
+  padding: 0px;
+}
+
+header h1 {
+  position: relative;
+  right: 3px;
+  color: #f66b7a;
+  font-family: "Bungee Shade";
+  font-size: 3rem;
+  text-align: center;
+}
+
+#title {
+  border: 5px dashed #43c4d1;
+  border-radius: 5px;
+  padding: 10px 25px 15px 30px;
+}
+
+nav {
+  border-top: 3px solid #ffe0e4;
+  border-bottom: 3px solid #ffe0e4;
+  background-color: #ffe0e4;
+  font-family: "Bungee Hairline";
+  font-size: 0.95rem;
+  height: 18px;
+  padding: 12px;
+}
+
+nav a {
+  color: #008894;
+  padding: 15px;
+}
+
+nav a:visited {
+  color: #d05764;
+}
+
+nav a:hover { /* This font doesn't really have a bold weight, sorry */
+  color: #075961;
+  font-weight: bold;
+}
+
+nav a:active {
+  text-decoration: none;
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  background-color: #ffe0e4;
+  color: #c63d4c;
+  font-family: "Bungee Hairline";
+  font-size: 1.15rem;
+  font-weight: bold;
+  line-height: 0.9rem;
+  text-align: center;
+  width: 100%;
+}
