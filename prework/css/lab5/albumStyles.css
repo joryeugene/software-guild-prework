@@ -1,0 +1,79 @@
+@font-face {
+    font-family: Cooper;
+    src: url(cooper.ttf);
+}
+
+body {
+  font-family: Garamond, serif;
+  font-size: 18px;
+  padding: 40px;
+  text-align: center;
+}
+
+#album {
+  background: url(brothers.jpg) no-repeat;
+  margin: 0 auto;
+  height: 400px;
+  width: 400px;
+}
+
+header {
+  line-height: 0.5;
+}
+
+header h1 {
+  font-family: Cooper, monospace;
+  font-size: 2.8rem;
+}
+
+a {
+  color: #ff0000;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #fa7070;
+}
+
+a:hover {
+  background-color: black;
+  color: white;
+  text-decoration: underline;
+}
+
+a:active {
+  background-color: white;
+}
+
+main h2:first-of-type {
+  font-family: Cooper, monospace;
+  font-size: 2rem;
+}
+
+ul {
+  font-style: italic;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table, th, td {
+  border: 1px solid #000000;
+}
+
+th, td {
+  padding: 5px;
+}
+
+thead {
+  background-color: #ba0303;
+  color: white;
+}
+
+tbody {
+  background-color: #dedede;
+  font-style: italic;
+}
