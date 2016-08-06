@@ -1,0 +1,25 @@
+body {
+  padding: 40px;
+  text-align: center;
+}
+
+header {
+  line-height: 0.5;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table, th, td {
+  border: 1px solid #000000;
+}
+
+th, td {
+  padding: 5px;
+}
+
+tr:first-of-type {
+  background: #c8c8c8;
+}
