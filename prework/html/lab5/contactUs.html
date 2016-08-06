@@ -33,7 +33,7 @@
       td {
         padding: 10px 30px 0px 0px;
       }
-      input[type=text], select, textarea {
+      input[type=text], #email, select, textarea {
         border: 2px solid black;
         font-family: inherit;
         font-size: inherit;
@@ -73,23 +73,23 @@
       </nav>
     </header>
     <div class="center">
-      <form action="fakePage.html" method="POST">
+      <form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php " method="get" enctype="multipart/form-data">
         <table>
           <tr>
-            <td>Name:</td>
-            <td><input type="text" name="name"></td>
+            <td><label for="name">Name:</label></td>
+            <td><input type="text" name="name" id="name"></td>
           </tr>
           <tr>
-            <td>Email:</td>
-            <td><input type="text" name="email"></td>
+            <td><label for="email">Email:</label></td>
+            <td><input type="email" name="email" id="email"></td>
           </tr>
           <tr>
-            <td>Phone:</td>
-            <td><input type="text" name="phone"></td>
+            <td><label for="phone">Phone:</label></td>
+            <td><input type="text" name="phone" id="phone"></td>
           </tr>
           <tr>
-            <td>Reason for Inquiry:</td>
-            <td><select name="reason">
+            <td><label for="reason">Reason for Inquiry:</label></td>
+            <td><select name="reason" id="reason">
               <option value="catering">Catering</option>
               <option value="party">Private Party</option>
               <option value="feedback">Feedback</option>
@@ -97,23 +97,23 @@
             </select></td>
           </tr>
           <tr>
-            <td class="padding" valign="top">Additional Information:</td>
-            <td><textarea name="addInfo" rows="6"></textarea></td>
+            <td class="padding" valign="top"><label for="addInfo">Additional Information:</label></td>
+            <td><textarea name="addInfo" id="addInfo" rows="6" style="overflow: auto; resize: none"></textarea></td>
           </tr>
 
           <tr>
             <td>Have you been to the restaurant:</td>
-            <td><input type="radio" name="pastCustomer" value="no" checked>No
-                <input type="radio" name="pastCustomer" value="yes">Yes</td>
+            <td><label><input type="radio" name="pastCustomer" value="no" checked>No</label>
+                <label><input type="radio" name="pastCustomer" value="yes">Yes</label></td>
           </tr>
           <tr>
             <td>Best days to contact you:</td>
             <td>
-              <input type="checkbox" name="contactDay" value="monday">M
-              <input type="checkbox" name="contactDay" value="tuesday">T
-              <input type="checkbox" name="contactDay" value="wednesday">W
-              <input type="checkbox" name="contactDay" value="thursday">Th
-              <input type="checkbox" name="contactDay" value="friday">F
+              <label><input type="checkbox" name="contactDay" value="monday">M</label>
+              <label><input type="checkbox" name="contactDay" value="tuesday">T</label>
+              <label><input type="checkbox" name="contactDay" value="wednesday">W</label>
+              <label><input type="checkbox" name="contactDay" value="thursday">Th</label>
+              <label><input type="checkbox" name="contactDay" value="friday">F</label>
             </td>
           </tr>
           <tr>
