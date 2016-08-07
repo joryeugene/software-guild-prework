@@ -1,3 +1,4 @@
+/*
 @font-face {
     font-family: 'Cooper';
     src: url('Cooper.eot'); /* Still doesn't work on IE for some really annoying reason */
@@ -5,7 +6,17 @@
          url('Cooper.woff') format('woff'),
          url('Cooper.ttf') format('truetype');
 }
+*/
 
+@font-face {
+    font-family: "Cooper";
+    src: url("http://db.onlinewebfonts.com/t/c632fa0216eed0c3ee8384ffb53b9f5e.eot");
+    src: url("http://db.onlinewebfonts.com/t/c632fa0216eed0c3ee8384ffb53b9f5e.eot?#iefix") format("embedded-opentype"),
+    url("http://db.onlinewebfonts.com/t/c632fa0216eed0c3ee8384ffb53b9f5e.woff2") format("woff2"),
+    url("http://db.onlinewebfonts.com/t/c632fa0216eed0c3ee8384ffb53b9f5e.woff") format("woff"),
+    url("http://db.onlinewebfonts.com/t/c632fa0216eed0c3ee8384ffb53b9f5e.ttf") format("truetype"),
+    url("http://db.onlinewebfonts.com/t/c632fa0216eed0c3ee8384ffb53b9f5e.svg#Cooper") format("svg");
+}
 body {
   font-family: Garamond, serif;
   font-size: 18px;
