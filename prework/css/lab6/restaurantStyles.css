@@ -3,6 +3,7 @@ body {
   font-size: 17px;
   margin: 0px;
   padding: 0px;
+  text-align: center;
 }
 
 header h1 {
@@ -11,27 +12,25 @@ header h1 {
   color: #f66b7a;
   font-family: "Bungee Shade";
   font-size: 3rem;
-  text-align: center;
 }
 
 #title {
   border: 5px dashed #43c4d1;
-  border-radius: 5px;
+  border-radius: 13px;
   padding: 10px 25px 15px 30px;
 }
 
 nav {
-  border-top: 3px solid #ffe0e4;
-  border-bottom: 3px solid #ffe0e4;
   background-color: #ffe0e4;
-  font-family: "Bungee Hairline";
+  border-top: 3px solid #ffe0e4;
+  border-bottom: 3px dashed white;
   font-size: 0.95rem;
-  height: 18px;
   padding: 12px;
+  text-align: left;
 }
 
 nav a {
-  color: #008894;
+  color: #036c75;
   padding: 15px;
 }
 
@@ -39,12 +38,14 @@ nav a:visited {
   color: #d05764;
 }
 
-nav a:hover { /* This font doesn't really have a bold weight, sorry */
-  color: #075961;
+nav a:hover {
+  color: white;
   font-weight: bold;
 }
 
 nav a:active {
+  position: relative;
+  top: 2px;
   text-decoration: none;
 }
 
@@ -52,8 +53,8 @@ footer {
   position: fixed;
   bottom: 0px;
   background-color: #ffe0e4;
-  color: #c63d4c;
-  font-family: "Bungee Hairline";
+  border-top: 3px dashed white;
+  color: #f66b7a;
   font-size: 1.15rem;
   font-weight: bold;
   line-height: 0.9rem;

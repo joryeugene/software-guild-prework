@@ -4,15 +4,14 @@
   <head>
     <title>Kimbap Heaven - Contact Us</title>
     <link rel="stylesheet" href="restaurantStyles.css" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Bungee+Hairline|Bungee+Shade" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
     <style>
       #centerForm {
-        font-family: "Bungee Hairline";
-        background-color: #f67c89;
-        border: 3px solid #ffe0e4;
+        background-color: #ffe0e4;
+        border: 3px dashed white;
         border-radius: 25px;
-        color: white;
-        margin: 40px auto 130px auto;
+        color: #f66b7a;
+        margin: 35px auto 125px auto;
         max-width: 440px;
         padding: 25px;
       }
@@ -20,17 +19,17 @@
         padding: 7px 0 7px 0;
       }
       thead td {
-        border-bottom: 1px dashed white;
+        border-bottom: 3px solid white;
       }
       td:first-child {
-        font-size: 1.05rem;
+        font-size: 0.95rem;
         font-weight: bold;
         max-width: 210px;
         padding-right: 30px;
         text-align: right;
       }
       input[type=text], #email, select, textarea {
-        border: 1px solid #dd5260;
+        border: 2px solid #43c4d1;
         border-radius: 5px;
         font-family: inherit;
         font-size: inherit;
@@ -47,9 +46,16 @@
         color: white;
         font-family: inherit;
         font-size: 1.1em;
-        margin: 10px 0 0 30px;
+        margin-top: 10px;
         padding: 4px;
         width: 135px;
+      }
+      #radio {
+        padding-left: 8px;
+        text-align: left;
+      }
+      #radio label {
+        padding-right: 17px;
       }
     </style>
   </head>
@@ -95,8 +101,10 @@
           </tr>
           <tr>
             <td>Have you been to the restaurant?</td>
-            <td><label><input type="radio" name="pastCustomer" value="no" checked>No</label>
-                <label><input type="radio" name="pastCustomer" value="yes">Yes</label></td>
+            <td id="radio">
+              <label><input type="radio" name="pastCustomer" value="yes">Yes</label>
+              <label><input type="radio" name="pastCustomer" value="no">No</label>
+            </td>
           </tr>
           <tr>
             <td>Best days to <br>contact you:</td>
