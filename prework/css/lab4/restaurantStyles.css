@@ -3,6 +3,7 @@ body {
   font-size: 17px;
   margin: 0px;
   padding: 0px;
+  text-align: center;
 }
 
 header h1 {
@@ -10,15 +11,14 @@ header h1 {
   font-family: "Bungee Shade";
   font-size: 3rem;
   padding: 1px;
-  text-align: center;
 }
 
 nav {
   border-top: 3px solid #f67c89;
   border-bottom: 3px solid #f67c89;
-  font-family: "Bungee Hairline";
   font-size: 0.95rem;
   padding: 12px;
+  text-align: left;
 }
 
 nav a {
@@ -31,7 +31,6 @@ footer {
   background-color: white;
   border-top: 3px solid #f67c89;
   color: #f55667;
-  font-family: "Bungee Hairline";
   font-size: 1.15rem;
   line-height: 0.9rem;
   text-align: center;
