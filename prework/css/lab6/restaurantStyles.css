@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'Bungee Shade';
+  font-family: 'Bungee Shade'; /* Line spacing too big on Windows */
   src: url('Bungee-Shade.eot');
   src: url('Bungee-Shade.eot?#iefix') format('embedded-opentype'),
        url('Bungee-Shade.woff2') format('woff2'),
@@ -9,6 +9,7 @@
 body {
   font-family: "Courier New", monospace;
   font-size: 17px;
+  line-height: normal;
   margin: 0px;
   padding: 0px;
   text-align: center;
