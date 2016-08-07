@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="restaurantStyles.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
     <style>
-      #main {
+      main {
         background-color: #f67c89;
         border-radius: 25px;
         margin: 35px auto 120px auto;
@@ -16,10 +16,11 @@
       #mainPhoto {
         height: 150px;
         width: 490px;
+        background: url("kb1.jpg") no-repeat;
+        background-size: cover;
         border: 3px solid white;
         border-radius: 20px;
-        margin-top: 15px;
-        margin-bottom: 15px;
+        margin: 15px auto 15px auto;
       }
       #description {
         background-color: white;
@@ -56,8 +57,9 @@
       </nav>
     </header>
 
-    <main id="main">
-      <img src="kb1.jpg" id="mainPhoto" alt="Delicious kimbap on a plate">
+    <main>
+      <!-- <img src="kb1.jpg" id="mainPhoto" alt="Delicious kimbap on a plate"> -->
+      <div id="mainPhoto" role="img" title="Photo of our original kimbap"></div>
       <div id="description">
         <strong>Best Kimbap in the USA</strong>
         <p>
