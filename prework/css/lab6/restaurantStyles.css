@@ -21,17 +21,23 @@ body {
 
 header h1 {
   position: relative;
-  right: 3px;
+  right: 2px;
   color: #f66b7a;
   font-family: "Bungee Shade", "Courier New", monospace;
   font-size: 3rem;
-  line-height: 1.63em;
+  line-height: 1.5em;
+  /*Border*/
+  border: 5px dashed #43c4d1;
+  border-radius: 13px;
+  margin: 2rem auto 1.8rem auto;
+  padding: 0.5rem;
+  width: 34rem;
 }
 
-#title {
-  border: 5px dashed #43c4d1; /* Way too much padding on Windows */
-  border-radius: 13px;
-  padding: 0.5rem 1.5rem 1rem 1.7rem;
+#title { /*Border*/
+  position: relative;
+  bottom: 4px;
+  left: 1px;
 }
 
 nav {
