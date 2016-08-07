@@ -44,20 +44,23 @@ nav {
 }
 
 nav a {
-  color: #036c75;
   padding: 15px;
 }
 
-nav a:visited {
+a {
+  color: #036c75;
+}
+
+a:visited {
   color: #d05764;
 }
 
-nav a:hover {
+a:hover {
   color: white;
   font-weight: bold;
 }
 
-nav a:active {
+a:active {
   position: relative;
   top: 2px;
   text-decoration: none;
@@ -69,9 +72,9 @@ footer {
   background-color: #ffe0e4;
   border-top: 3px dashed white;
   color: #f66b7a;
-  font-size: 1.15rem;
+  font-size: 0.95rem;
   font-weight: bold;
-  line-height: 0.9rem;
+  line-height: 0.7rem;
   text-align: center;
   width: 100%;
 }
