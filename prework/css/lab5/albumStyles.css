@@ -1,12 +1,4 @@
-/*
-@font-face {
-    font-family: 'Cooper';
-    src: url('Cooper.eot'); /* Still doesn't work on IE for some really annoying reason */
-    src: url('Cooper.eot?#iefix') format('embedded-opentype'),
-         url('Cooper.woff') format('woff'),
-         url('Cooper.ttf') format('truetype');
-}
-*/
+
 
 @font-face {
     font-family: "Cooper";
