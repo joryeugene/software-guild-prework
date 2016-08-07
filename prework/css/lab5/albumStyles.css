@@ -1,6 +1,9 @@
 @font-face {
-    font-family: Cooper;
-    src: url(cooper.ttf);
+    font-family: 'Cooper';
+    src: url('cooper1.eot'); /* Still doesn't work on IE for some really annoying reason */
+    src: url('cooper1.eot?#iefix') format('embedded-opentype'),
+         url('cooper.woff') format('woff'),
+         url('cooper.ttf') format('truetype');
 }
 
 body {
@@ -22,7 +25,7 @@ header {
 }
 
 header h1 {
-  font-family: Cooper, monospace;
+  font-family: 'Cooper', monospace;
   font-size: 2.8rem;
 }
 
@@ -46,7 +49,7 @@ a:active {
 }
 
 main h2:first-of-type {
-  font-family: Cooper, monospace;
+  font-family: 'Cooper', monospace;
   font-size: 2rem;
 }
 

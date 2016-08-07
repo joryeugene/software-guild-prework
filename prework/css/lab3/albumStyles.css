@@ -1,9 +1,9 @@
 @font-face {
     font-family: 'Cooper';
-    src: url('cooper1.eot'); /* eot for IE */
+    src: url('cooper1.eot'); /* Still doesn't work on IE for some really annoying reason */
     src: url('cooper1.eot?#iefix') format('embedded-opentype'),
          url('cooper.woff') format('woff'),
-         url('cooper.ttf');
+         url('cooper.ttf') format('truetype');
 }
 
 body {
