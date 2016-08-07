@@ -9,15 +9,20 @@
 html {
   font-family: "Courier New", monospace;
   font-size: 17px;
+
   text-align: center;
   line-height: 1; /* Trying to fix Windows Webfont issue spacing issue */
   float: left; /* Trying to fix Windows Webfont issue spacing issue */
   width: 100%; /* Trying to fix Windows Webfont issue spacing issue */
 }
 
+body {
+  margin: 0;
+}
+
 header h1 {
   position: relative;
-  right: 5px;
+  right: 3px;
   color: #f66b7a;
   font-family: "Bungee Shade";
   font-size: 3rem;
@@ -25,9 +30,10 @@ header h1 {
 }
 
 #title {
-  border: 5px dashed #43c4d1;
+  border: 5px dashed #43c4d1; /* Way too much padding on Windows */
   border-radius: 13px;
-  padding: 10px 25px 15px 30px;
+  /*padding: 10px 25px 15px 30px;*/
+  padding: 0.5rem 1.5rem 1rem 1.7rem;
 }
 
 nav {
