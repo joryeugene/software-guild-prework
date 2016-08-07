@@ -1,8 +1,8 @@
 @font-face {
-    font-family: Cooper;
-    src: url("cooper.eot"); /* eot for IE */
+    font-family: 'Cooper';
+    src: url('cooper.eot'); /* eot for IE */
     src: url('cooper.eot?#iefix') format('embedded-opentype'),
-         url("cooper.ttf");
+         url('cooper.ttf');
 }
 
 body {
@@ -13,7 +13,7 @@ body {
 }
 
 #album {
-  background: url(brothers.jpg) no-repeat;
+  background: url('brothers.jpg') no-repeat;
   margin: 0 auto;
   height: 400px;
   width: 400px;
@@ -24,12 +24,12 @@ header {
 }
 
 header h1 {
-  font-family: Cooper, monospace;
+  font-family: 'Cooper', monospace;
   font-size: 2.8rem;
 }
 
 main h2:first-of-type {
-  font-family: Cooper, monospace;
+  font-family: 'Cooper', monospace;
   font-size: 2rem;
 }
 
