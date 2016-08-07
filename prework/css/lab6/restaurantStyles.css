@@ -6,13 +6,13 @@
        url('Bungee-Shade.woff') format('woff');
 }
 
-body {
+html {
   font-family: "Courier New", monospace;
   font-size: 17px;
   text-align: center;
   line-height: 1; /* Trying to fix Windows Webfont issue spacing issue */
   float: left; /* Trying to fix Windows Webfont issue spacing issue */
-  width: 99.5%; /* Trying to fix Windows Webfont issue spacing issue */
+  width: 100%; /* Trying to fix Windows Webfont issue spacing issue */
 }
 
 header h1 {
