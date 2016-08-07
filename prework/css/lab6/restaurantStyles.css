@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Bungee Shade';
+  src: url('Bungee-Shade.eot');
+  src: url('Bungee-Shade.eot?#iefix') format('embedded-opentype'),
+       url('Bungee-Shade.woff2') format('woff2'),
+       url('Bungee-Shade.woff') format('woff');
+}
+
 body {
   font-family: "Courier New", monospace;
   font-size: 17px;
