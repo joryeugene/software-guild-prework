@@ -6,13 +6,23 @@
        url('Bungee-Shade.woff') format('woff');
 }
 
+
+
+* {
+
+  line-height: 1;
+}
+
 body {
   font-family: "Courier New", monospace;
   font-size: 17px;
-  line-height: 1;
+
   margin: 0px;
   padding: 0px;
   text-align: center;
+
+  float: left;
+  width: 100%;
 }
 
 header h1 {
