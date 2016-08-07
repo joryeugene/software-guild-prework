@@ -1,6 +1,8 @@
 @font-face {
     font-family: Cooper;
-    src: url(cooper.ttf);
+    src: url("cooper.eot"); /* eot for IE */
+    src: url('cooper.eot?#iefix') format('embedded-opentype'),
+         url("cooper.ttf");
 }
 
 body {
