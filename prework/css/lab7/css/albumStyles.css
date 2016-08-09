@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'Cooper';
+    src: url('../etc/cooper.eot');
+    src: url('../etc/cooper.eot?#iefix') format('embedded-opentype'),
+         url('../etc/cooper.woff') format('woff'),
+         url('../etc/cooper.ttf') format('truetype');
+}
+
+html {
+  font-family: Garamond, serif;
+  font-size: 18px;
+  padding: 2%;
+  text-align: center;
+}
+
+header h1 {
+  font-family: 'Cooper', monospace;
+  font-size: 2.5rem;
+}
+
+a {
+  color: #ff0000;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #fa7070;
+}
+
+a:hover {
+  background-color: black;
+  color: white;
+  text-decoration: underline;
+}
+
+a:active {
+  background-color: white;
+}
+
+.container-fluid h2:first-of-type {
+  font-family: 'Cooper', monospace;
+  font-size: 2rem;
+}
+
+ul {
+  font-style: italic;
+  padding-bottom: 20px;
+  text-align: left;
+}
+
+table.table {
+  border: 1px solid black;
+  box-shadow: 0 1px 5px 1px black;
+  margin: 0 auto 10px;
+  width: 97%;
+}
+
+.table-responsive {
+  border: none;
+}
+
+th {
+  text-align: center;
+}
+
+thead {
+  background-color: #ba0303;
+  color: white;
+}
+
+tbody {
+  background-color: #dedede;
+  font-style: italic;
+}
