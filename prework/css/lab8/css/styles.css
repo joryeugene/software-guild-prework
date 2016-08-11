@@ -25,6 +25,14 @@ body {
   text-decoration: none;
 }
 
+.navbar-brand h1:hover {
+  text-shadow: 1px 1px 10px orange;
+}
+
+.navbar-brand h1:active {
+  text-shadow: none;
+}
+
 #nav-list {
   margin-top: 5px;
 }
