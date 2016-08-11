@@ -5,7 +5,6 @@ body {
 }
 
 /*Header*/
-/*#ffc0cb*/
 #header-nav {
   background-color: #f994a6;
   border: 0;
@@ -43,6 +42,11 @@ body {
 
 #nav-list a:hover {
   background: #3fa6d6;
+}
+
+#nav-list a:active {
+  background-color: #ffffff;
+  color: #ffa500;
 }
 
 .navbar-header button.navbar-toggle, .navbar-header .icon-bar {
@@ -143,6 +147,11 @@ body {
 
 #address p {
   color: #3fa6d6;
+}
+
+#address a:active {
+  color: white;
+  text-decoration: none;
 }
 
 #testimonials {
