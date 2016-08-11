@@ -124,16 +124,16 @@ body {
 }
 
 /********** Menu page **********/
-#menu-content {
+#menu-content, #contact-content {
   border: 2px solid #f994a6;
   background-color: white;
   border-radius: 10px;
-  box-shadow: 0 0 10px #3fa6d6;
+  box-shadow: 0 0 10px #f994a6;
   margin-top: 60px;
   margin-bottom: 60px;
 }
 
-#menu-title {
+#menu-title, #contact-title {
   color: #f994a6;
   font-family: "Bungee Shade";
   font-size: 3em;
@@ -205,6 +205,33 @@ body {
   font-weight: bold;
 }
 /********** Menu page end ******/
+
+/********** Contact page **********/
+#contact-title {
+  font-size: 2.7em;
+}
+
+#contact-content {
+  color: #d1697b;
+}
+
+.form-control {
+  border-color: #fbb237;
+  color: #fbb237;
+}
+
+.form-control::-webkit-input-placeholder { color: #f9c162; font-style: italic;}
+.form-control:-moz-placeholder { color: #f9c162; font-style: italic;}
+.form-control::-moz-placeholder { color: #f9c162; font-style: italic;}
+.form-control:-ms-input-placeholder { color: #f9c162; font-style: italic;}
+
+#contactBtn {
+  background-color: #f994a6;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+/********** Contact page end ******/
+
 
 /*Footer*/
 .panel-footer {
@@ -311,7 +338,7 @@ body {
   }
 
   /*Menu page*/
-  #menu-content {
+  #menu-content, #contact-content {
     margin: 30px 3%;
   }
 
@@ -341,6 +368,9 @@ body {
   }
   #news {
     font-size: 1.4em;
+  }
+  #contact-title {
+    font-size: 1.9em;
   }
   .visible-xxs {
     display: block !important;
