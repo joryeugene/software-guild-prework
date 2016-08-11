@@ -1,0 +1,394 @@
+body {
+  background-color: #ffffff;
+  font-family: 'Oxygen', Garamond, serif;
+  font-size: 16px;
+}
+
+/*Header*/
+#header-nav {
+  background-color: #f994a6;
+  border: 0;
+  border-radius: 0;
+}
+
+.navbar-brand h1 {
+  position: relative;
+  bottom: 15px;
+  color: #ffffff;
+  font-family: 'Bungee Shade', sans-serif;
+  font-size: 2.4em;
+  text-shadow: 1px 1px 1px #3fa6d6;
+  text-transform: uppercase;
+}
+
+.navbar-brand a:hover, .navbar-brand a:focus {
+  text-decoration: none;
+}
+
+.navbar-brand h1:hover {
+  text-shadow: 1px 1px 10px orange;
+}
+
+.navbar-brand h1:active {
+  text-shadow: none;
+}
+
+#nav-list {
+  margin-top: 5px;
+}
+
+#nav-list a {
+  color: #ffffff;
+  border-radius: 4px;
+  text-align: center;
+  text-shadow: 1px 1px 1px #3fa6d6;
+}
+
+#nav-list span {
+  font-size: 1.8em;
+}
+
+#nav-list a:hover {
+  background: #3fa6d6;
+}
+
+#nav-list a:active {
+  background-color: #ffffff;
+  color: #ffa500;
+}
+
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+  background-color: #ffffff;
+  border: 1px solid #3fa6d6;
+}
+
+.navbar-header button.navbar-toggle {
+  margin-top: 28px;
+  margin-right: 15px;
+}
+/*End of header*/
+
+.container .jumbotron {
+  padding: 0px;
+}
+
+#carousel-example-generic {
+  box-shadow: 0 0 5px  #ffc0cb;
+}
+
+#carousel-example-generic img {
+  min-width: 100%;
+}
+
+.carousel-caption {
+  text-shadow: 0px 0px 4px #000000;
+}
+
+/*Tiles*/
+#menu-tile, #contact-tile, #map-tile {
+  height: 250px;
+  width: 100%;
+  border: 2px solid #ffc0cb;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  position: relative;
+}
+
+#menu-tile:hover, #contact-tile:hover, #map-tile:hover {
+  box-shadow: 0 1px 5px 1px #3fa6d6;
+}
+
+#menu-tile {
+  background: url('../img/menu.jpg') no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+#contact-tile {
+  background: url('../img/contact.jpg') no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+/*#ffa500*/
+#menu-tile span, #contact-tile span, #map-tile span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ffa500;
+  box-shadow: 0px 5px 5px #ffa500; /* Cover gap on Chrome */
+  color: #ffffff;
+  font-size: 1.6em;
+  opacity: 0.9;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+/********** Menu page **********/
+#menu-content, #contact-content {
+  border: 2px solid #f994a6;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #f994a6;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+#menu-title, #contact-title {
+  color: #f994a6;
+  font-family: "Bungee Shade";
+  font-size: 3em;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.menu-tile {
+  background-color: white;
+  border: 2px solid #f994a6;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px #3fa6d6;
+  color: #f994a6;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.menu-tile:hover, #beverages:hover, #deliver:hover  {
+  border: 2px solid #ffa500;
+  box-shadow: 0px 2px 5px #ffa500;
+  color: #ffa500;
+}
+
+.menu-tile:hover p:first-of-type, #beverages:hover p:first-of-type, #deliver:hover p:first-of-type {
+  background-color: #ffa500;
+  box-shadow: 0px 2px 5px #ffa500;
+}
+
+.menu-tile p:first-of-type {
+  background-color: #f994a6;
+  border-radius: 0 0 2px 2px;
+  box-shadow: 0px 2px 5px #3fa6d6;
+  color: white;
+  font-family: "Bungee Shade";
+  font-size: 1.4em;
+}
+
+.menu-tile p:last-of-type {
+  padding: 5px;
+}
+
+.menu-tile span, #deliver a {
+  font-weight: bold;
+}
+
+#deliver a:active {
+  color: #ffa500;
+  text-decoration: none;
+}
+
+#beverages, #deliver {
+  border: 2px solid #3fa6d6;
+  color: #3fa6d6;
+}
+
+#beverages p:first-of-type, #deliver p:first-of-type {
+  background-color: #3fa6d6;
+}
+
+#beverages table {
+  margin: 0 auto 10px;
+}
+
+#beverages table td:first-child {
+  text-align: left;
+}
+
+#beverages table td:last-child {
+  font-weight: bold;
+}
+/********** Menu page end ******/
+
+/********** Contact page **********/
+#contact-title {
+  font-size: 2.7em;
+}
+
+#contact-content {
+  color: #d1697b;
+}
+
+.form-control {
+  border-color: #fbb237;
+  color: #fbb237;
+}
+
+.form-control::-webkit-input-placeholder { color: #f9c162; font-style: italic;}
+.form-control:-moz-placeholder { color: #f9c162; font-style: italic;}
+.form-control::-moz-placeholder { color: #f9c162; font-style: italic;}
+.form-control:-ms-input-placeholder { color: #f9c162; font-style: italic;}
+
+#contactBtn {
+  background-color: #f994a6;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+/********** Contact page end ******/
+
+
+/*Footer*/
+.panel-footer {
+  background-color: #f994a6;
+  border-top: 0;
+  color: #ffffff;
+  margin-top: 30px
+  padding-top: 35px;
+  padding-bottom: 30px;
+}
+
+.panel-footer div.row {
+  margin-bottom: 35px;
+}
+
+#hours, #address {
+  line-height: 2;
+}
+
+#hours > span, #address > span {
+  font-size: 1.3em;
+}
+
+#address p {
+  color: #3fa6d6;
+}
+
+#address a:active {
+  color: white;
+  text-decoration: none;
+}
+
+#testimonials {
+  font-style: italic;
+}
+
+#testimonials p:last-child {
+  margin-top: 25px;
+}
+
+.visible-xxs {
+  display: none !important;
+}
+
+/********** Media queries **********/
+@media (min-width: 1200px) {
+  .container .jumbotron, #carousel-example-generic img {
+    height: 650px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container .jumbotron, #carousel-example-generic img {
+    height: 550px;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 991px) {
+  .container .jumbotron, #carousel-example-generic img {
+    height: 420px;
+  }
+
+  /*Menu page*/
+  #menu-content {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  #menu-title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container .jumbotron, #carousel-example-generic img {
+    height: 350px;
+  }
+  .container .jumbotron {
+    margin-bottom: 50px;
+  }
+  .navbar-brand h1 {
+    text-shadow: none;
+  }
+  .navbar-brand {
+    height: 90px;
+  }
+  #collapsable-nav a  {
+    font-size: 1.2em;
+  }
+  #collapsable-nav span  {
+    font-size: 1em;
+    margin-right: 5px;
+  }
+  /*End header*/
+
+  .container .jumbotron {
+    height: 320px;
+  }
+
+  /*Tiles*/
+  #menu-tile, #contact-tile {
+    width: 100%;
+  }
+
+  #menu-tile {
+    background-position: center;
+  }
+  #contact-tile {
+    background-position: 0px -30px;
+  }
+
+  /*Menu page*/
+  #menu-content, #contact-content {
+    margin: 30px 3%;
+  }
+
+  /*Footer*/
+  .panel-footer section {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .panel-footer section:last-child {
+    margin-bottom: 0;
+  }
+  .panel-footer section hr {
+    width: 50%;
+  }
+}
+
+@media (max-width: 550px) { /*xxs for iPhone 5 and such*/
+  .container .jumbotron, #carousel-example-generic img {
+    height: 250px;
+  }
+  .container .jumbotron {
+    margin-bottom: 20px;
+  }
+  .navbar-brand h1 {
+    font-size: 6.5vw;
+    padding-top: 11px;
+  }
+  #news {
+    font-size: 1.4em;
+  }
+  #contact-title {
+    font-size: 1.9em;
+  }
+  .visible-xxs {
+    display: block !important;
+  }
+  .col-xxs-12 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+    width: 100%;
+  }
+}
