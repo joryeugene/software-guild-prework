@@ -195,8 +195,14 @@ body {
 
   /*Tiles*/
   #menu-tile, #contact-tile {
-    margin: 0 auto 15px;
-    max-width: 380px;
+    width: 100%;
+  }
+
+  #menu-tile {
+    background-position: center;
+  }
+  #contact-tile {
+    background-position: 0px -30px;
   }
 
   /*Footer*/
