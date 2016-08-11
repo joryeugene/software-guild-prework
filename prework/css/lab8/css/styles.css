@@ -279,6 +279,9 @@ body {
 }
 
 @media (max-width: 767px) {
+  .navbar-brand h1 {
+    text-shadow: none;
+  }
   .navbar-brand {
     height: 90px;
   }
