@@ -280,6 +280,10 @@ body {
   margin-top: 25px;
 }
 
+.visible-xxs {
+  display: none !important;
+}
+
 /********** Media queries **********/
 @media (min-width: 1200px) {
   .container .jumbotron {
