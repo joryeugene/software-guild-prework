@@ -12,6 +12,12 @@ h1 {
   padding: 10px 0;
 }
 
+@media (max-width: 450px) {
+  h1 {
+    font-size: 13vw;
+  }
+}
+
 .container {
   background-color: white;
   border: 2px solid black;
