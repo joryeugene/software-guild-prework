@@ -1,32 +1,34 @@
 
-var nameInput = document.getElementById("name");
-var emailInput = document.getElementById("email");
-var phoneInput = document.getElementById("phone");
-var reasonInput = document.getElementById("reason");
-var additionalInput = document.getElementById("addInfo");
+var nameInput = document.getElementById("name"),
+    emailInput = document.getElementById("email"),
+    phoneInput = document.getElementById("phone"),
+    reasonInput = document.getElementById("reason"),
+    additionalInput = document.getElementById("addInfo");
 
 function validate () {
 
+  var alertMsg = "";
+
   // Name and one form of contact information (Email or Phone) should be filled in
   if (!(nameInput.value && (emailInput.value || phoneInput.value))) {
-    if (nameInput.value) alert("Please include at least one way to contact you (either an email or phone number)");
-    else if (emailInput.value || phoneInput.value) alert("Please enter your name");
-    else alert("Make sure you have entered your name and atleast one way to contact you");
-    return false;
+    if (nameInput.value) alertMsg+="\u2022 Please include at least one way to contact you (either an email or phone number)\n\n";
+    else if (emailInput.value || phoneInput.value) alertMsg+="\u2022 Please enter your name\n\n";
+    else alertMsg+="\u2022 Make sure you have entered your name and atleast one way to contact you\n\n";
   }
 
   // If Reason for Inquiry's dropdown is selected to Other, make sure that the Additional Information is filled in.
   if (reasonInput.value == "other" && !additionalInput.value) {
-    alert("(Other) Please explain your reason for inquiring in the Additional Information section");
-    return false;
+    alertMsg+="\u2022 (Other) Please explain your reason for inquiring in the Additional Information section\n\n";
   }
 
   // Best days to contact you must have at least one day checked
   var numChecked = document.querySelectorAll('input[type="checkbox"]:checked').length;
   if (numChecked < 1) {
-    alert("Please select at least one day that is convenient to contact you");
+    alertMsg+="\u2022 Please select at least one day that is convenient to contact you\n\n";
+  }
+
+  if (alertMsg) {
+    alert(alertMsg);
     return false;
   }
 }
-
-// TODO: alert("Line 1\nLine 2");   build up to one alert msg at the end?   and return false if alertMsg true
