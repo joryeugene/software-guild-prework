@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!-- Jory Eugene Pestorious -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kimbap Heaven - Contact Us</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen:400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
+  </head>
+<body>
+  <header>
+    <nav id="header-nav" class="navbar navbar-default">
+      <div class="container">
+
+        <div class="navbar-header">
+          <div class="navbar-brand">
+            <a href="index.html"><h1>Kimbap Heaven</h1></a>
+          </div>
+
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+          data-target="#collapsable-nav" aria-expanded="false">
+            <span class="sr-only">Toogle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div> <!-- navbar-header -->
+
+        <div id="collapsable-nav" class="collapse navbar-collapse">
+          <ul id="nav-list" class="nav navbar-nav navbar-right"> <!-- Sorry, I can't do a collapable nav bar with nav-pills or nav-tabs cleanly -->
+            <li><a href="index.html"><span class="glyphicon glyphicon-home"></span>
+              <br class="hidden-xs">Home</a></li>
+            <li><a href="menu.html"><span class="glyphicon glyphicon-cutlery"></span>
+              <br class="hidden-xs">Menu</a></li>
+            <li><a href="contactUs.html"><span class="glyphicon glyphicon-info-sign"></span>
+              <br class="hidden-xs">Contact Us</a></li>
+          </ul>
+        </div>
+
+      </div> <!-- container -->
+    </nav>
+  </header>
+
+  <div id="contact-content" class="container">
+    <h2 id="contact-title" class="text-center">Contact Us</h2>
+
+    <form class="form-horizontal" action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="get">
+      <div class="form-group">
+        <label for="name" class="col-sm-3 control-label">Name:</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" id="name" placeholder="Name">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email" class="col-sm-3 control-label">Email:</label>
+        <div class="col-sm-9">
+          <input type="email" class="form-control" id="email" placeholder="Email">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="phone" class="col-sm-3 control-label">Phone:</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" id="phone" placeholder="Phone number">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="reason" class="col-sm-3 control-label">Reason for Inquiry:</label>
+        <div class="col-sm-9">
+          <select name="reason" id="reason" class="form-control">
+            <option value="catering">Catering</option>
+            <option value="party">Private Party</option>
+            <option value="feedback">Feedback</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="addInfo" class="col-sm-3 control-label">Additional Information:</label>
+        <div class="col-sm-9">
+          <textarea name="addInfo" id="addInfo" class="form-control" placeholder="Additional Information"
+          style="overflow: auto; resize: none"></textarea>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-3 control-label">Have you been to the restaurant?</label>
+        <div class="col-sm-9">
+          <label class="radio-inline">
+            <input type="radio" name="pastCustomer" id="inlineRadio1" value="yes"> Yes
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="pastCustomer" id="inlineRadio2" value="no"> No
+          </label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-3 control-label">Best day(s) to contact you:</label>
+        <div class="col-sm-9">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="inlineCheckbox1" name="contactDay" value="monday"> M
+          </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" id="inlineCheckbox2" name="contactDay" value="tuesday"> T
+          </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" id="inlineCheckbox3" name="contactDay" value="wednesday"> W
+          </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" id="inlineCheckbox2" name="contactDay" value="thursday"> Th
+          </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" id="inlineCheckbox3" name="contactDay" value="friday"> F
+          </label>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-3 col-sm-9">
+          <button id="contactBtn" type="submit" class="btn btn-default">Send</button>
+        </div>
+      </div>
+    </form>
+  </div> <!-- contact-content -->
+
+  <footer class="panel-footer">
+    <div class="container">
+      <div class="row">
+        <section id="hours" class="col-sm-4">
+          <span>Hours:</span><br>
+          Tues-Thurs: 10:00am - 10:00pm<br>
+          Fri-Sun: 10:00am - 12:00am<br>
+          Monday Closed
+          <hr class="visible-xs">
+        </section>
+        <section id="address" class="col-sm-4">
+          <span>Address:</span><br>
+          401 S Vermont Ave #3,
+          7105 Reisterstown Road<br>
+          Los Angeles, CA 90020
+          <p><a href="tel:12133823701">* We Deliver! (213) 382-3701</a></p>
+          <hr class="visible-xs">
+        </section>
+        <section id="testimonials" class="col-sm-4">
+          <p>"This is the best kimbap I've ever had in my life! It was pure ectasy from the first bite to the last!"</p>
+          <p>"Our child wouldn't stop screaming when we had to leave. He kept saying, 'More Kimbap Heaven, Mommy! More Kimbap Heaven!!!'"</p>
+        </section>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
