@@ -1,13 +1,13 @@
-var bet = document.getElementById("bet");
-var playBtn = document.getElementById("play");
-var output = document.getElementById("output");
-var results = document.getElementById("results");
-var rules = document.getElementById("rules");
-var rulesBtn = document.getElementById("rulesBtn");
-var resultsBtn = document.getElementById("resultsBtn");
-var hint = document.getElementById("hint");
-var tds = document.getElementsByTagName("td");
-var count = 0, maxCount = 0, luckyCount = 0, currentMoney, maxMoney, betTest;
+var bet = document.getElementById("bet"),
+    playBtn = document.getElementById("play"),
+    output = document.getElementById("output"),
+    results = document.getElementById("results"),
+    rules = document.getElementById("rules"),
+    rulesBtn = document.getElementById("rulesBtn"),
+    resultsBtn = document.getElementById("resultsBtn"),
+    hint = document.getElementById("hint"),
+    tds = document.getElementsByTagName("td"),
+    count = 0, maxCount = 0, luckyCount = 0, currentMoney, maxMoney, betTest;
 
 // Allow user to press enter from the input field to start the game
 bet.addEventListener("keypress", function(event) {
@@ -19,7 +19,6 @@ bet.addEventListener("keypress", function(event) {
 function playGame() {
   // Reset content if playing again and make sure hidden content is displayed
   resetContent();
-
 
   // Convert and test input
   betTest = parseInt(bet.value);
@@ -55,9 +54,9 @@ function playGame() {
   }
 
   // Grammar
-  var roll1 = (maxCount==1) ? " roll" : " rolls";
-  var roll2 = (count==1) ? " roll" : " rolls";
-  var times = (luckyCount==1) ? " time" : " times";
+  var roll1 = (maxCount==1) ? " roll" : " rolls",
+      roll2 = (count==1) ? " roll" : " rolls",
+      times = (luckyCount==1) ? " time" : " times";
 
   // Results table outcome
   tds[0].innerHTML = "$" + betTest;
