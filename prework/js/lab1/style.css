@@ -81,7 +81,8 @@ button {
   color: white;
   font-family: inherit;
   font-size: inherit;
-  width: 120px;
+  height: 49px;
+  width: 80px;
 }
 
 button:active {
