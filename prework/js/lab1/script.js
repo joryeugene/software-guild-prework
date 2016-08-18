@@ -6,7 +6,7 @@ var rules = document.getElementById("rules");
 var rulesBtn = document.getElementById("rulesBtn");
 var resultsBtn = document.getElementById("resultsBtn");
 var tds = document.getElementsByTagName("td");
-var count = 0, maxCount = 0, currentMoney, maxMoney, betTest;
+var count = 0, maxCount = 0, luckyCount = 0, currentMoney, maxMoney, betTest;
 
 // Allow user to press enter from the input field to start the game
 bet.addEventListener("keypress", function(event) {
@@ -41,6 +41,7 @@ function playGame() {
         win = false;
     if (die1+die2==7) {
       currentMoney+=4;
+      luckyCount++;
       win = true;
     } else currentMoney-=1;
     count++;
@@ -59,18 +60,21 @@ function playGame() {
   // Grammar
   var roll1 = (maxCount==1) ? " roll" : " rolls";
   var roll2 = (count==1) ? " roll" : " rolls";
+  var times = (luckyCount==1) ? " time" : " times";
 
   // Results table outcome
   tds[0].innerHTML = "$" + betTest;
   tds[1].innerHTML = count + roll2;
   tds[2].innerHTML = "$" + maxMoney;
   tds[3].innerHTML = maxCount + roll1;
-  if (betTest == maxMoney) results.innerHTML += "<p><mark>Dang... you never made more than your initial bet.</mark></p>";
-  if (count == betTest) results.innerHTML += "<p><mark><b>And not even one lucky seven... it is not your day!</b></mark></p>";
+  if (luckyCount) results.innerHTML += "<p><mark><b>You rolled a <i>Lucky Seven</i> " +luckyCount+times+ ".</b></mark></p>";
+  if (betTest == maxMoney) results.innerHTML += "<p><mark>Dang... you never made more than your starting cash.</mark></p>";
+  if (count == betTest) results.innerHTML += "<p><mark><b>And not even one <i>Lucky Seven</i>... it is not your day!</b></mark></p>";
 
   // Reset to play again quickly
   count = 0;
   maxCount = 0;
+  luckyCount = 0;
   playBtn.innerHTML = "Play Again?";
   bet.value = "";
   bet.focus();
