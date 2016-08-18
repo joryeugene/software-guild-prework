@@ -4,7 +4,6 @@ var emailInput = document.getElementById("email");
 var phoneInput = document.getElementById("phone");
 var reasonInput = document.getElementById("reason");
 var additionalInput = document.getElementById("addInfo");
-var numChecked = document.querySelectorAll('input[type="checkbox"]:checked').length;
 
 function validate () {
 
@@ -18,11 +17,12 @@ function validate () {
 
   // If Reason for Inquiry's dropdown is selected to Other, make sure that the Additional Information is filled in.
   if (reasonInput.value == "other" && !additionalInput.value) {
-    alert("Please explain your reason for inquiring in the Additional Information section");
+    alert("(Other) Please explain your reason for inquiring in the Additional Information section");
     return false;
   }
 
   // Best days to contact you must have at least one day checked
+  var numChecked = document.querySelectorAll('input[type="checkbox"]:checked').length;
   if (numChecked < 1) {
     alert("Please select at least one day that is convenient to contact you");
     return false;
