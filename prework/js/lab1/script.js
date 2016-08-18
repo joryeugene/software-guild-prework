@@ -52,7 +52,7 @@ function playGame() {
 
     // Game log output
     // This is quite slow for larger numbers, so I have to set an upper limit on the initial bet if included
-    var outcome = (win) ? "won $4!" : "lost $1";
+    var outcome = (win) ? "<mark>won $4!</mark>" : "lost $1";
     output.innerHTML += "<span id='first'>You rolled " + die1 + " and " + die2 + " and " + outcome + "</span><br>";
     output.innerHTML += "<span id='second'>Roll #" + count + " and your cash total is <ins>$" + currentMoney +"</ins></span><br>";
   }
