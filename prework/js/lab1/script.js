@@ -74,7 +74,7 @@ function playGame() {
   playBtn.innerHTML = "Play Again?";
   bet.value = "";
   bet.focus();
-  toggleHint();
+  showHint();
 }
 
 function resetContent () {
@@ -100,7 +100,10 @@ function showResults () {
   rulesBtn.style.display = "block";
 }
 
-function toggleHint () {
-  if (hint.style.visibility === "visible") hint.style.visibility = "hidden";
-  else hint.style.visibility = "visible";
+function showHint () {
+    hint.style.visibility = "visible";
+}
+
+function hideHint () {
+  hint.style.visibility = "hidden";
 }
