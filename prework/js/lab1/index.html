@@ -61,7 +61,6 @@
       while (currentMoney > 0) {
         var dice1 = 1 + Math.floor(Math.random() * 6),
             dice2 = 1 + Math.floor(Math.random() * 6);
-
         if (dice1+dice2==7) currentMoney+=4;
         else currentMoney-=1;
         count++;
@@ -71,12 +70,13 @@
         }
         console.log("Current money is: "+currentMoney+" and count is: " + count);
       }
-      var roll = (maxCount==1) ? " roll" : " rolls";
-      console.log("Your starting bet was " + betTest);
-      console.log("The highest amount of money you had was " + maxMoney);
-      console.log("You achieved your highest amount of money after " + maxCount + roll);
-      console.log("You lost all your money after " + count + " dice" + roll);
+      var roll1 = (maxCount==1) ? " roll" : " rolls";
+      var roll2 = (count==1) ? " roll" : " rolls";
+      console.log("Your starting bet was $" + betTest);
+      console.log("The highest amount of money you had was $" + maxMoney);
+      console.log("You lost all your money after " + count + " dice" + roll2);
       if (betTest === maxMoney) console.log("Dang... you never even made more than your initial bet");
+      else console.log("You achieved your highest amount of money after " + maxCount + roll1);
 
       // Change button to "Play Again"
     }
