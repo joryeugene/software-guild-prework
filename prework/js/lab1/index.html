@@ -27,6 +27,7 @@
     button {
       font-family: inherit;
       font-size: inherit;
+      width: 100px;
     }
   </style>
 </head>
@@ -35,7 +36,7 @@
   <div class="container">
     <h1>Lucky Sevens</h1>
     <label for="bet">Starting Bet:<input type="text" id="bet" placeholder="$0"></label>
-    <p><button onclick="startGame()">Play</button></p>
+    <p><button id="play" onclick="startGame()">Play</button></p>
   </div>
 
   <!-- TODO Add game tooltip that closes on buttom click -->
@@ -46,7 +47,15 @@
 
   <script>
     var bet = document.getElementById("bet");
+    var playBtn = document.getElementById("play");
     var count = 0, maxCount = 0, currentMoney, maxMoney, betTest;
+
+    // Allow user to press enter from the input field to start the game
+    bet.addEventListener("keypress", function(event) {
+        if (event.keyCode == 13) {
+            playBtn.click();
+        }
+    });
 
     function startGame() {
       // Convert and test input
@@ -54,9 +63,11 @@
       while (isNaN(betTest) || betTest < 1) {
         betTest = parseInt(prompt("Bet by entering a number that is 1 or higher"));
       }
+
       // Set initial maxMoney in the case of never making more than the initial bet
       currentMoney = betTest;
       maxMoney =  currentMoney;
+
       // Play the game until there is no more money to play with
       while (currentMoney > 0) {
         var dice1 = 1 + Math.floor(Math.random() * 6),
@@ -68,21 +79,25 @@
           maxMoney = currentMoney;
           maxCount = count;
         }
+        // Console testing
         console.log("Current money is: "+currentMoney+" and count is: " + count);
       }
+
+      // Grammar
       var roll1 = (maxCount==1) ? " roll" : " rolls";
       var roll2 = (count==1) ? " roll" : " rolls";
+      // Outcomes
       console.log("Your starting bet was $" + betTest);
       console.log("The highest amount of money you had was $" + maxMoney);
       console.log("You lost all your money after " + count + " dice" + roll2);
-      if (betTest === maxMoney) console.log("Dang... you never even made more than your initial bet");
-      else console.log("You achieved your highest amount of money after " + maxCount + roll1);
+      if (betTest == maxMoney) console.log("Dang... you never made more than your initial bet");
+      else console.log("You achieved your highest amount after " + maxCount + roll1);
+      if (count == betTest) console.log("And not even one lucky seven... it is not your day!");
 
-      // Change button to "Play Again"
-
-      // Reset
+      // Reset to play again quickly
       count = 0;
       maxCount = 0;
+      playBtn.innerHTML = "Play Again";
       bet.value = "";
       bet.focus();
     }
