@@ -5,6 +5,7 @@ var results = document.getElementById("results");
 var rules = document.getElementById("rules");
 var rulesBtn = document.getElementById("rulesBtn");
 var resultsBtn = document.getElementById("resultsBtn");
+var hint = document.getElementById("hint");
 var tds = document.getElementsByTagName("td");
 var count = 0, maxCount = 0, luckyCount = 0, currentMoney, maxMoney, betTest;
 
@@ -18,11 +19,7 @@ bet.addEventListener("keypress", function(event) {
 function playGame() {
   // Reset content if playing again and make sure hidden content is displayed
   resetContent();
-  output.style.display = "block";
-  results.style.display = "block";
-  rules.style.display = "none";
-  resultsBtn.style.display = "none";
-  rulesBtn.style.display = "block";
+
 
   // Convert and test input
   betTest = parseInt(bet.value);
@@ -78,11 +75,14 @@ function playGame() {
   playBtn.innerHTML = "Play Again?";
   bet.value = "";
   bet.focus();
+  toggleHint();
 }
 
 function resetContent () {
   output.innerHTML = "<div class='label'>Game Log</div>";
   results.innerHTML = "<div class='label'>Results</div><table><tr><th>Starting Bet</th><td></td></tr><tr><th>Highest Cash Total</th><td></td></tr><tr><th>Roll Count at Highest Cash Total</th><td></td></tr><tr><th>Total Rolls Before Going Broke</th><td></td></tr></table>";
+  hint.style.visibility = "hidden";
+  showResults();
 }
 
 function showRules () {
@@ -99,4 +99,9 @@ function showResults () {
   rules.style.display = "none";
   resultsBtn.style.display = "none";
   rulesBtn.style.display = "block";
+}
+
+function toggleHint () {
+  if (hint.style.visibility === "visible") hint.style.visibility = "hidden";
+  else hint.style.visibility = "visible";
 }

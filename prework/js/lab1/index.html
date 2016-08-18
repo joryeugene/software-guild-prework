@@ -13,7 +13,10 @@
 
   <div class="container">
     <h1>Lucky 7's</h1>
-    <label for="bet">Starting Cash:<input type="text" id="bet" placeholder="$1 to $50"></label>
+    <label for="bet">Starting Cash:
+      <input type="text" id="bet" placeholder="$1 to $50" onfocus="toggleHint()" onblur="toggleHint()">
+    </label>
+    <span id="hint">Press Enter or Click Play</span>
     <p><button id="play" onclick="playGame()">Play</button></p>
   </div>
 
