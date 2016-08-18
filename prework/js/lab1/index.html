@@ -8,16 +8,62 @@
   <title>Lucky Sevens</title>
   <style>
     html {
+      background-color: #ededed;
       font-size: 17px;
+      padding-top: 10px;
     }
     .container {
-      border: 2px dashed #ff0004;
-      margin: 50px auto;
+      background-color: white;
+      border: 2px solid black;
+      margin: 20px auto;
       max-width: 500px;
-      padding: 20px 20px 30px 20px;
+      padding: 10px;
       text-align: center;
     }
+    .hidden {
+      display: none;
+      position: relative;
+      padding-top: 40px;
+    }
+    #output {
+      height: 140px;
+      overflow: auto;
+    }
+    #first {
+      font-style: italic;
+    }
+    #second {
+      font-weight: bold;
+    }
+    .label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: black;
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      width: 100%;
+    }
+    #results {
+
+    }
+
+    table, th, td {
+      border: 1px solid black;
+    }
+    table, tr {
+      border: 2px solid black;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th {
+      background-color: #d4d4d4;
+      width: 60%;
+    }
     input {
+      border: 1px solid black;
       font-family: inherit;
       font-size: inherit;
       margin-left: 10px;
@@ -25,6 +71,8 @@
       text-align: center;
     }
     button {
+      background-color: black;
+      color: white;
       font-family: inherit;
       font-size: inherit;
       width: 100px;
@@ -36,18 +84,44 @@
   <div class="container">
     <h1>Lucky Sevens</h1>
     <label for="bet">Starting Bet:<input type="text" id="bet" placeholder="$0"></label>
-    <p><button id="play" onclick="startGame()">Play</button></p>
+    <p><button id="play" onclick="playGame()">Play</button></p>
   </div>
 
   <!-- TODO Add game tooltip that closes on buttom click -->
 
+  <div id="output" class="container hidden">
+    <div class="label">Game Log</div>
+  </div>
 
+  <div id="results" class="container hidden">
+    <div class="label">Results</div>
+    <table>
+      <tr>
+        <th>Starting Bet</th>
+        <td></td>
+      </tr>
+      <tr>
+        <th>Total Rolls Before Going Broke</th>
+        <td></td>
+      </tr>
+      <tr>
+        <th>Highest Amount</th>
+        <td></td>
+      </tr>
+      <tr>
+        <th>Roll Count at Highest Amount</th>
+        <td></td>
+      </tr>
+    </table>
+  </div>
 
 
 
   <script>
     var bet = document.getElementById("bet");
     var playBtn = document.getElementById("play");
+    var output = document.getElementById("output");
+    var results = document.getElementById("results");
     var count = 0, maxCount = 0, currentMoney, maxMoney, betTest;
 
     // Allow user to press enter from the input field to start the game
@@ -57,7 +131,11 @@
         }
     });
 
-    function startGame() {
+    function playGame() {
+      // Reset content if playing again and make sure hidden content is displayed
+      resetContent();
+      output.style.display = "block";
+      results.style.display = "block";
       // Convert and test input
       betTest = parseInt(bet.value);
       while (isNaN(betTest) || betTest < 1) {
@@ -70,17 +148,21 @@
 
       // Play the game until there is no more money to play with
       while (currentMoney > 0) {
-        var dice1 = 1 + Math.floor(Math.random() * 6),
-            dice2 = 1 + Math.floor(Math.random() * 6);
-        if (dice1+dice2==7) currentMoney+=4;
-        else currentMoney-=1;
+        var die1 = 1 + Math.floor(Math.random() * 6),
+            die2 = 1 + Math.floor(Math.random() * 6),
+            win = false;
+        if (die1+die2==7) {
+          currentMoney+=4;
+          win = true;
+        } else currentMoney-=1;
         count++;
         if (currentMoney > maxMoney) {
           maxMoney = currentMoney;
           maxCount = count;
         }
-        // Console testing
-        console.log("Current money is: "+currentMoney+" and count is: " + count);
+        var outcome = (win) ? "won $4!" : "lost $1";
+        output.innerHTML += "<span id='first'>You rolled " + die1 + " and " + die2 + " and " + outcome + "</span><br>";
+        output.innerHTML += "<span id='second'>Roll #" + count + " and your money total is <ins>$" + currentMoney +"</ins></span><br>";
       }
 
       // Grammar
@@ -97,9 +179,14 @@
       // Reset to play again quickly
       count = 0;
       maxCount = 0;
-      playBtn.innerHTML = "Play Again";
+      playBtn.innerHTML = "Play Again?";
       bet.value = "";
       bet.focus();
+    }
+
+    function resetContent () {
+      output.innerHTML = "<div class='label'>Game Log</div>";
+      results.innerHTML = "<div class='label'>Results</div><table><tr><th>Starting Bet</th><td></td></tr><tr><th>Total Rolls Before Going Broke</th><td></td></tr><tr><th>Highest Amount</th><td></td></tr><tr><th>Roll Count at Highest Amount</th><td></td></tr></table>";
     }
 
 
