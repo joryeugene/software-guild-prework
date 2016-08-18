@@ -19,3 +19,4 @@ This repo is for my work done while in the **Software Guild**.![Software Guild L
     * [Lab 9 - Restaurant Site v6](http://joryeugene.bitbucket.org/prework/css/lab9/) | [_[SOURCES]_](https://bitbucket.org/joryeugene/joryeugene.bitbucket.org/src/master/prework/css/lab9/)
 * **JavaScript**
     * [Lab 1 - Lucky Sevens](http://joryeugene.bitbucket.org/prework/js/lab1/) | [_[SOURCES]_](https://bitbucket.org/joryeugene/joryeugene.bitbucket.org/src/master/prework/js/lab1/)
+    * [Lab 2 - Restaurant Site v7](http://joryeugene.bitbucket.org/prework/js/lab2/) | [_[SOURCES]_](https://bitbucket.org/joryeugene/joryeugene.bitbucket.org/src/master/prework/js/lab2/)
