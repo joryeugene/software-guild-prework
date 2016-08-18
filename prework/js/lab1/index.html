@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!-- Jory Eugene Pestorious -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Lucky Sevens</title>
+  <style>
+    html {
+      font-size: 17px;
+    }
+    .container {
+      border: 2px dashed #ff0004;
+      margin: 50px auto;
+      max-width: 500px;
+      padding: 20px 20px 30px 20px;
+      text-align: center;
+    }
+    input {
+      font-family: inherit;
+      font-size: inherit;
+      margin-left: 10px;
+      max-width: 50px;
+      text-align: center;
+    }
+    button {
+      font-family: inherit;
+      font-size: inherit;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Lucky Sevens</h1>
+    <label for="bet">Starting Bet:<input type="text" id="bet" placeholder="$0"></label>
+    <p><button onclick="startGame()">Play</button></p>
+  </div>
+
+  <!-- TODO Add game tooltip that closes on buttom click -->
+
+
+
+
+
+  <script>
+    var bet = document.getElementById("bet");
+    var count = 0, maxCount = 0, currentMoney, maxMoney, betTest;
+
+    function startGame() {
+      // Convert and test input
+      betTest = parseInt(bet.value);
+      while (isNaN(betTest) || betTest < 1) {
+        betTest = parseInt(prompt("Bet by entering a number that is 1 or higher"));
+      }
+      // Set initial maxMoney in the case of never making more than the initial bet
+      currentMoney = betTest;
+      maxMoney =  currentMoney;
+      // Play the game until there is no more money to play with
+      while (currentMoney > 0) {
+        var dice1 = 1 + Math.floor(Math.random() * 6),
+            dice2 = 1 + Math.floor(Math.random() * 6);
+
+        if (dice1+dice2==7) currentMoney+=4;
+        else currentMoney-=1;
+        count++;
+        if (currentMoney > maxMoney) {
+          maxMoney = currentMoney;
+          maxCount = count;
+        }
+        console.log("Current money is: "+currentMoney+" and count is: " + count);
+      }
+      var roll = (maxCount==1) ? " roll" : " rolls";
+      console.log("Your starting bet was " + betTest);
+      console.log("The highest amount of money you had was " + maxMoney);
+      console.log("You achieved your highest amount of money after " + maxCount + roll);
+      console.log("You lost all your money after " + count + " dice" + roll);
+      if (betTest === maxMoney) console.log("Dang... you never even made more than your initial bet");
+
+      // Change button to "Play Again"
+    }
+
+
+
+  </script>
+</body>
+</html>
