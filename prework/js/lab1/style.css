@@ -1,7 +1,15 @@
 html {
   background-color: #ededed;
+  font-family: "Times New Roman", serif;
   font-size: 17px;
   padding-top: 10px;
+}
+
+h1 {
+  font-family: 'Ewert', cursive;
+  font-size: 4rem;
+  margin: 0;
+  padding: 10px 0;
 }
 
 .container {
@@ -72,6 +80,7 @@ input {
   font-family: inherit;
   font-size: inherit;
   margin-left: 10px;
+  margin-bottom: 10px;
   max-width: 80px;
   text-align: center;
 }

@@ -64,9 +64,9 @@ function playGame() {
 
   // Results table outcome
   tds[0].innerHTML = "$" + betTest;
-  tds[1].innerHTML = count + roll2;
-  tds[2].innerHTML = "$" + maxMoney;
-  tds[3].innerHTML = maxCount + roll1;
+  tds[1].innerHTML = "$" + maxMoney;
+  tds[2].innerHTML = maxCount + roll1;
+  tds[3].innerHTML = count + roll2;
   if (luckyCount) results.innerHTML += "<p><mark><b>You rolled a <i>Lucky Seven</i> " +luckyCount+times+ ".</b></mark></p>";
   if (betTest == maxMoney) results.innerHTML += "<p><mark>Dang... you never made more than your starting cash.</mark></p>";
   if (count == betTest) results.innerHTML += "<p><mark><b>And not even one <i>Lucky Seven</i>... it is not your day!</b></mark></p>";
@@ -82,7 +82,7 @@ function playGame() {
 
 function resetContent () {
   output.innerHTML = "<div class='label'>Game Log</div>";
-  results.innerHTML = "<div class='label'>Results</div><table><tr><th>Starting Bet</th><td></td></tr><tr><th>Total Rolls Before Going Broke</th><td></td></tr><tr><th>Highest Cash Total</th><td></td></tr><tr><th>Roll Count at Highest Cash Total</th><td></td></tr></table>";
+  results.innerHTML = "<div class='label'>Results</div><table><tr><th>Starting Bet</th><td></td></tr><tr><th>Highest Cash Total</th><td></td></tr><tr><th>Roll Count at Highest Cash Total</th><td></td></tr><tr><th>Total Rolls Before Going Broke</th><td></td></tr></table>";
 }
 
 function showRules () {
