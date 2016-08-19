@@ -53,6 +53,7 @@ function resetContent () {
   hint.style.visibility = "hidden";
   output.style.display = "block";
   rules.style.display = "none";
+  results.style.display = "none";
 }
 
 function validateInput () {
