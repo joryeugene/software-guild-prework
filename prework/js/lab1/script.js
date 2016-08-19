@@ -73,7 +73,7 @@ function playing () {
     currentMoney+=4;
     luckyCount++;
     win = true;
-  } else currentMoney-=1;
+  } else currentMoney--;
   count++;
   if (currentMoney > maxMoney) {
     maxMoney = currentMoney;
