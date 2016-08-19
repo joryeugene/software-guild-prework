@@ -1,5 +1,3 @@
-/*TODO: Add colors and more robust design*/
-
 html {
   background-color: #F59873;
   color: #8F320D;
@@ -9,6 +7,7 @@ html {
 }
 
 h1 {
+  color: #a64100;
   font-family: 'Ewert', cursive;
   font-size: 4rem;
   margin: 5px 0 0;
@@ -83,6 +82,7 @@ input {
 .container {
   background-color: #FFBDA3;
   border: 2px dashed #8F320D;
+  border-radius: 5px;
   margin: 20px auto;
   max-width: 500px;
   padding: 10px;
@@ -152,7 +152,7 @@ th {
 /*Results*/
 
 button {
-  background-color: #8F320D;
+  background-color: #d2590b;
   border: 2px dashed #FFBDA3;
   color: #FFBDA3;
   font-family: inherit;
@@ -176,5 +176,6 @@ button:active {
 
 mark {
   color: #8F320D;
-  background-color: #f9f371;
+  background-color: #ffd074;
+  border-radius: 3px;
 }
