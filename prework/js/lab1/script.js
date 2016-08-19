@@ -81,7 +81,7 @@ function resetContent () {
   output.innerHTML = "<div class='label'>Game Log</div>";
   results.innerHTML = "<div class='label'>Results</div><table><tr><th>Starting Bet</th><td></td></tr><tr><th>Highest Cash Total</th><td></td></tr><tr><th>Roll Count at Highest Cash Total</th><td></td></tr><tr><th>Total Rolls Before Going Broke</th><td></td></tr></table>";
   hint.style.visibility = "hidden";
-  showResults();
+  showResults( );
 }
 
 function showRules () {
