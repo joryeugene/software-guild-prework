@@ -2,6 +2,8 @@ var bet = document.getElementById("bet"),
     playBtn = document.getElementById("play"),
     output = document.getElementById("output"),
     results = document.getElementById("results"),
+    outputTemplate = document.getElementById("output").innerHTML,
+    resultsTemplate = document.getElementById("results").innerHTML,
     rules = document.getElementById("rules"),
     rulesBtn = document.getElementById("rulesBtn"),
     resultsBtn = document.getElementById("resultsBtn"),
@@ -16,6 +18,7 @@ bet.addEventListener("keypress", function(event) {
     }
 });
 
+////////////////////////////// Main function ///////////////////////////////////
 function playGame() {
   resetContent();
   validateInput();
@@ -23,7 +26,7 @@ function playGame() {
   currentMoney = betTest;
   maxMoney =  currentMoney;
 
-  // Setting up non-blocking loop to play the game's main function
+  // Setting up non-blocking recursive loop to run the game's main function
   var gameLoop = window.requestAnimationFrame ||
            window.webkitRequestAnimationFrame ||
            window.mozRequestAnimationFrame    ||
@@ -42,17 +45,17 @@ function playGame() {
     gameLoop(recursiveLoop);
   };
 
-  // Start playing and logging the game with non-blocking loop
+  // Start playing and logging the game with non-blocking recursive loop
   gameLoop(recursiveLoop);
 }
 
 ///////////////////////////////// Game helpers //////////////////////////////////
 function resetContent () {
-  output.innerHTML = "<div class='label'>Game Log</div>";
-  results.innerHTML = "<div class='label'>Results</div><table><tr><th>Starting Bet</th><td></td></tr><tr><th>Highest Cash Total</th><td></td></tr><tr><th>Roll Count at Highest Cash Total</th><td></td></tr><tr><th>Total Rolls Before Going Broke</th><td></td></tr></table>";
+  output.innerHTML = outputTemplate;
+  results.innerHTML = resultsTemplate;
   hint.style.visibility = "hidden";
-  output.style.display = "block";
   rules.style.display = "none";
+  output.style.display = "block";
   results.style.display = "none";
   rulesBtn.style.display = "none";
   resultsBtn.style.display = "none";
@@ -80,12 +83,18 @@ function playing () {
     maxCount = count;
   }
   // Game Log output
-  // This is quite slow for larger numbers, so I have to set a <100 upper limit on the initial bet if included
+  // This is slow for larger numbers, so I set a <=50 upper limit on the initial bet
   if (win) {
-    var prependWin = "<span class='second win'>Roll #" + count + " and your cash total is <ins>$" + currentMoney +"</ins></span><br><span class='first'>You rolled " + die1 + " and " + die2 + " and <mark>won $4!</mark></span><br>";
+    var prependWin = "<span class='second win'>Roll #" + count +
+      " and your cash total is <ins>$" + currentMoney +
+      "</ins></span><br><span class='first'>You rolled " + die1 +
+      " and " + die2 + " and <mark>won $4!</mark></span><br>";
     output.insertAdjacentHTML("afterbegin", prependWin);
   } else {
-    var prependLoss = "<span class='second lose'>Roll #" + count + " and your cash total is <ins>$" + currentMoney +"</ins></span><br><span class='first'>You rolled " + die1 + " and " + die2 + " and lost $1</span><br>";
+    var prependLoss = "<span class='second lose'>Roll #" + count +
+      " and your cash total is <ins>$" + currentMoney +
+      "</ins></span><br><span class='first'>You rolled " + die1 +
+      " and " + die2 + " and lost $1</span><br>";
     output.insertAdjacentHTML("afterbegin", prependLoss);
   }
 }
@@ -100,7 +109,7 @@ function populateResults () {
   tds[1].innerHTML = "$" + maxMoney;
   tds[2].innerHTML = maxCount + roll1;
   tds[3].innerHTML = count + roll2;
-  if (luckyCount) results.innerHTML += "<p><mark><b>You rolled a <i>Lucky Seven</i> " +luckyCount+times+ ".</b></mark></p>";
+  if (luckyCount) results.innerHTML += "<p><mark><b>You rolled a <i>Lucky Seven</i> "+luckyCount+times+".</b></mark></p>";
   if (betTest == maxMoney) results.innerHTML += "<p><mark>Dang... you never made more than your starting cash.</mark></p>";
   if (count == betTest) results.innerHTML += "<p><mark><b>And not even one <i>Lucky Seven</i>... it is not your day!</b></mark></p>";
   showResults();
@@ -117,18 +126,18 @@ function resetGame () {
 
 // Buttons at the bottom of the page
 function showRules () {
-  results.style.display = "none";
   rules.style.display = "block";
+  results.style.display = "none";
   rulesBtn.style.display = "none";
   resultsBtn.style.display = "block";
 }
 
 function showResults () {
+  rules.style.display = "none";
   output.style.display = "block";
   results.style.display = "block";
-  rules.style.display = "none";
-  resultsBtn.style.display = "none";
   rulesBtn.style.display = "block";
+  resultsBtn.style.display = "none";
 }
 
 // Hint on input focus
