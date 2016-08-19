@@ -54,6 +54,8 @@ function resetContent () {
   output.style.display = "block";
   rules.style.display = "none";
   results.style.display = "none";
+  rulesBtn.style.display = "none";
+  resultsBtn.style.display = "none";
 }
 
 function validateInput () {
