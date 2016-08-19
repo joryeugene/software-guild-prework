@@ -118,6 +118,10 @@ input {
   font-weight: bold;
 }
 
+#rules p {
+  margin: 10px auto;
+}
+
 /*Game log*/
 #output {
   max-height: 140px;
