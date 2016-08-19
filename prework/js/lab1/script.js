@@ -17,20 +17,33 @@ bet.addEventListener("keypress", function(event) {
 });
 
 function playGame() {
-  // Reset content if playing again and make sure hidden content is displayed
   resetContent();
+  validateInput();
+  // Set initial maxMoney in the case of never making more than the initial bet
+  currentMoney = betTest;
+  maxMoney =  currentMoney;
+  playing();
+  populateResults();
+  resetGame();
+  showHint();
+}
 
-  // Convert and test input
+// Game helpers
+function resetContent () {
+  output.innerHTML = "<div class='label'>Game Log</div>";
+  results.innerHTML = "<div class='label'>Results</div><table><tr><th>Starting Bet</th><td></td></tr><tr><th>Highest Cash Total</th><td></td></tr><tr><th>Roll Count at Highest Cash Total</th><td></td></tr><tr><th>Total Rolls Before Going Broke</th><td></td></tr></table>";
+  hint.style.visibility = "hidden";
+  showResults();
+}
+
+function validateInput () {
   betTest = parseInt(bet.value);
   while (isNaN(betTest) || betTest < 1 || betTest > 50) {
     betTest = parseInt(prompt("Bet by entering a number from 1 to 50"));
   }
+}
 
-  // Set initial maxMoney in the case of never making more than the initial bet
-  currentMoney = betTest;
-  maxMoney =  currentMoney;
-
-  // Play the game until there is no more money to play with
+function playing () {
   while (currentMoney > 0) {
     var die1 = 1 + Math.floor(Math.random() * 6),
         die2 = 1 + Math.floor(Math.random() * 6),
@@ -45,20 +58,24 @@ function playGame() {
       maxMoney = currentMoney;
       maxCount = count;
     }
-
     // Game log output
-    // This is quite slow for larger numbers, so I have to set an upper limit on the initial bet if included
-    var outcome = (win) ? "<mark>won $4!</mark>" : "lost $1";
-    output.innerHTML += "<span id='first'>You rolled " + die1 + " and " + die2 + " and " + outcome + "</span><br>";
-    output.innerHTML += "<span id='second'>Roll #" + count + " and your cash total is <ins>$" + currentMoney +"</ins></span><br>";
+    // This is quite slow for larger numbers, so I have to set a <100 upper limit on the initial bet if included
+    if (win) {
+      output.innerHTML += "<span class='first'>You rolled " + die1 + " and " + die2 + " and <mark>won $4!</mark></span><br>";
+      output.innerHTML += "<span class='second win'>Roll #" + count + " and your cash total is <ins>$" + currentMoney +"</ins></span><br>";
+    } else {
+      output.innerHTML += "<span class='first'>You rolled " + die1 + " and " + die2 + " and lost $1</span><br>";
+      output.innerHTML += "<span class='second lose'>Roll #" + count + " and your cash total is <ins>$" + currentMoney +"</ins></span><br>";
+    }
   }
+}
 
+function populateResults () {
   // Grammar
   var roll1 = (maxCount==1) ? " roll" : " rolls",
       roll2 = (count==1) ? " roll" : " rolls",
       times = (luckyCount==1) ? " time" : " times";
-
-  // Results table outcome
+  // Results table
   tds[0].innerHTML = "$" + betTest;
   tds[1].innerHTML = "$" + maxMoney;
   tds[2].innerHTML = maxCount + roll1;
@@ -66,24 +83,18 @@ function playGame() {
   if (luckyCount) results.innerHTML += "<p><mark><b>You rolled a <i>Lucky Seven</i> " +luckyCount+times+ ".</b></mark></p>";
   if (betTest == maxMoney) results.innerHTML += "<p><mark>Dang... you never made more than your starting cash.</mark></p>";
   if (count == betTest) results.innerHTML += "<p><mark><b>And not even one <i>Lucky Seven</i>... it is not your day!</b></mark></p>";
+}
 
-  // Reset to play again quickly
+function resetGame () {
   count = 0;
   maxCount = 0;
   luckyCount = 0;
   playBtn.innerHTML = "Play Again?";
   bet.value = "";
   bet.focus();
-  showHint();
 }
 
-function resetContent () {
-  output.innerHTML = "<div class='label'>Game Log</div>";
-  results.innerHTML = "<div class='label'>Results</div><table><tr><th>Starting Bet</th><td></td></tr><tr><th>Highest Cash Total</th><td></td></tr><tr><th>Roll Count at Highest Cash Total</th><td></td></tr><tr><th>Total Rolls Before Going Broke</th><td></td></tr></table>";
-  hint.style.visibility = "hidden";
-  showResults( );
-}
-
+// Buttons at the bottom of the page
 function showRules () {
   output.style.display = "none";
   results.style.display = "none";
@@ -100,6 +111,7 @@ function showResults () {
   rulesBtn.style.display = "block";
 }
 
+// Hint on input focus
 function showHint () {
     hint.style.visibility = "visible";
 }
