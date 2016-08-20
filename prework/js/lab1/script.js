@@ -65,6 +65,7 @@ function resetContent () {
   results.style.display = "none";
   rulesBtn.style.display = "none";
   resultsBtn.style.display = "none";
+  playBtn.disabled = true;
 }
 
 function validateInput () {
@@ -128,6 +129,7 @@ function resetGame () {
   playBtn.innerHTML = "Play Again?";
   bet.value = "";
   bet.focus();
+  playBtn.disabled = false;
 }
 
 // Buttons at the bottom of the page
