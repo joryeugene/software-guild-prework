@@ -14,10 +14,10 @@
   <div class="container">
     <h1>Lucky 7's</h1>
     <label for="bet">Starting Cash:
-      <input type="text" id="bet" placeholder="$1 to $50" onfocus="showHint()" onblur="hideHint()">
+      <input type="text" id="bet" placeholder="$1 to $50">
     </label>
     <span id="hint">Press Enter or Click Play</span>
-    <p><button id="play" onclick="playGame()">Play</button></p>
+    <p><button id="play">Play</button></p>
     <noscript>
       For full functionality of this site it is necessary to enable JavaScript.
       Here are the <a href="http://www.enable-javascript.com/" target="_blank">
@@ -59,8 +59,8 @@
     </table>
   </div>
 
-  <p id="rulesBtn" class="hidden"><button onclick="showRules()">Show Rules</button></p>
-  <p id="resultsBtn" class="hidden"><button onclick="showResults()">Show Results</button></p>
+  <p id="rulesBtn"  class="hidden"><button>Show Rules</button></p>
+  <p id="resultsBtn" class="hidden"><button>Show Results</button></p>
 
   <script src="script.js"></script>
 </body>

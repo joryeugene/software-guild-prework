@@ -11,7 +11,13 @@ var bet = document.getElementById("bet"),
     tds = document.getElementsByTagName("td"),
     count = 0, maxCount = 0, luckyCount = 0, currentMoney, maxMoney, betTest;
 
-// Allow user to press enter from the input field to start the game
+// Event binding
+bet.onfocus = showHint;
+bet.onblur = hideHint;
+playBtn.onclick = playGame;
+rulesBtn.onclick = showRules;
+resultsBtn.onclick = showResults;
+// Allows user to press enter from the input field to start the game
 bet.addEventListener("keypress", function(event) {
     if (event.keyCode == 13) {
         playBtn.click();

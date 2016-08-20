@@ -4,6 +4,7 @@ html {
   font-family: "Times New Roman", serif;
   font-size: 17px;
   padding-top: 10px;
+  text-align: center;
 }
 
 h1 {
@@ -86,7 +87,6 @@ input {
   margin: 20px auto;
   max-width: 500px;
   padding: 10px;
-  text-align: center;
 }
 
 .label {
@@ -176,10 +176,6 @@ button {
 button:active {
   position: relative;
   top: 2px;
-}
-
-#rulesBtn, #resultsBtn  {
-  text-align: center;
 }
 
 #rulesBtn button, #resultsBtn button {
