@@ -1,5 +1,5 @@
-# SWCGUILD Repo
-This repo is for my work done while in the **Software Guild**.![Software Guild Logo](http://joryeugene.bitbucket.org/swg.jpg)
+# SWCGUILD Pre-work Repo
+This repo is for my pre-work done for the **Software Guild**.![Software Guild Logo](http://joryeugene.bitbucket.org/swg.jpg)
 ### Pre-work
 * **HTML**
     * [Lab 1 - Simple Page Lab](http://joryeugene.bitbucket.org/prework/html/lab1/simple.html) | [_[SOURCES]_](https://bitbucket.org/joryeugene/joryeugene.bitbucket.org/src/master/prework/html/lab1/)
